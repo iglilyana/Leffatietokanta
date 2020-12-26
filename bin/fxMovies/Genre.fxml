@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="431.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxMovies.GenreGUIController">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="NEVER" maxWidth="291.33331298828125" minWidth="10.0" prefWidth="83.66670099894205" />
+          <ColumnConstraints hgrow="NEVER" maxWidth="482.6666564941406" minWidth="10.0" prefWidth="336.66663233439135" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+        </rowConstraints>
+        <children>
+            <Label text="Genren tiedot" />
+            <Label prefHeight="17.0" prefWidth="79.0" text="Genre" GridPane.rowIndex="1" />
+            <TextField fx:id="nimi" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </GridPane>
+   </center>
+   <bottom>
+      <HBox alignment="TOP_RIGHT" prefHeight="33.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="tallenna" defaultButton="true" mnemonicParsing="false" onAction="#save" text="Tallenna">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="1.0" top="2.0" />
+               </HBox.margin></Button>
+            <Button fx:id="sulje" cancelButton="true" mnemonicParsing="false" onAction="#close" text="Sulje">
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="1.0" top="2.0" />
+               </HBox.margin></Button>
+         </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Ohje">
+            <items>
+              <MenuItem fx:id="help" mnemonicParsing="false" onAction="#help" text="Ohje" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
